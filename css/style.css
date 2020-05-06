@@ -74,8 +74,8 @@ body {
 
 .main-btn:hover {
   background-color: #FF121A;
-  -webkit-box-shadow: 0 0 2px 10px rgba(255, 18, 26, 0.205);
-          box-shadow: 0 0 2px 10px rgba(255, 18, 26, 0.205);
+  -webkit-box-shadow: 0 0 15px 5px rgba(255, 18, 26, 0.205);
+          box-shadow: 0 0 15px 5px rgba(255, 18, 26, 0.205);
   cursor: pointer;
 }
 
@@ -85,8 +85,8 @@ body {
 
 .main-btn.bg-red:hover {
   background-color: #2c5fe2;
-  -webkit-box-shadow: 0 0 2px 10px  #2c60e223;
-          box-shadow: 0 0 2px 10px  #2c60e223;
+  -webkit-box-shadow: 0 0 15px 5px #2c60e223;
+          box-shadow: 0 0 15px 5px #2c60e223;
 }
 
 .bold {
