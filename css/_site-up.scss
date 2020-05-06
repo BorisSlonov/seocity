@@ -1,0 +1,27 @@
+.page-site-up {
+    background: linear-gradient(180deg, #FFFFFF 0%, #5764C5 100%);
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.site-up {
+    line-height: 1.5;
+    &__h2 {
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    &__p {
+        margin-top: 1.5em;
+        letter-spacing: .3px;
+        .bold {
+            font-size: 1.2rem;
+            letter-spacing: .5px;
+        }
+    }
+
+    &__p1 {
+        margin-top: 1.5em;
+        letter-spacing: .3px;
+    }
+}

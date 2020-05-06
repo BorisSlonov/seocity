@@ -1,0 +1,260 @@
+.page-how-we-work {
+    background: $how-work-bg;
+    position: relative;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.accordeon-tabs {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    @media (min-width: 601px) {
+        box-sizing: content-box;
+        padding: 2em 0;
+        overflow: visible;
+
+        // subtle gradient-border between tabs and content
+        &:after {
+            content: '';
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 200px;
+            z-index: -2;
+
+        }
+    }
+}
+
+.accordeon-tabs__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.accordeon-tabs__item.isActive>.accordeon-tabs__link {
+    border-bottom: 1px solid #fff;
+
+
+}
+
+.accordeon-tabs__link {
+    transition: all .4s;
+   
+    &:hover {
+        cursor: pointer;
+        
+    }
+}
+
+
+
+.accordeon-tabs__link {
+    padding: 1em .75em;
+    padding-right: 2.5em;
+    border: 1px solid lightgrey;
+    display: block;
+    position: relative;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .05em;
+
+
+
+
+    @media (min-width: 601px) {
+        width: 200px;
+        padding: 2em 1em;
+        border: 0;
+        text-align: right;
+        box-shadow: none;
+
+        .isActive {
+            position: relative;
+            z-index: 2000;
+            // subtle gradient-border between tabs
+            border-bottom: 1px solid #fff;
+            background-color: #fff;
+
+
+        }
+
+        &.isActive {
+            border: 0;
+            // subtle gradient-border on top and bottom of active tab and gradient background
+
+            background-size:
+                100% 1px,
+                100% 1px,
+                100% 100%;
+            background-position:
+                right top,
+                right bottom,
+                right top;
+            background-repeat: no-repeat;
+        }
+
+        &.isActive:after {
+            content: '';
+            width: 200px;
+            height: 300%;
+            top: -100%;
+            right: 0;
+            left: auto;
+            // organic shadow on top and bottom of active tab
+            background:
+                radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 40%, rgba(255, 0, 0, 0) 65%),
+                radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 40%, rgba(255, 0, 0, 0) 65%),
+                radial-gradient(ellipse at center, rgba(0, 0, 0, .75) 20%, rgba(0, 0, 0, 0.35) 25%, rgba(0, 0, 0, 0) 60%);
+            background-position:
+                35px -15%,
+                35px 115%,
+                100px 0;
+            background-size:
+                100% 50%,
+                100% 50%,
+                100% 100%;
+            background-repeat: no-repeat;
+            opacity: .35;
+            animation: fadeIn-activeTabShadow 150ms ease-in;
+        }
+
+        &.isActive:before {
+            $nubsi-size: 1.5em;
+            content: '';
+            width: $nubsi-size;
+            height: $nubsi-size;
+            border: 1px solid rgba(255, 255, 255, 0.596);
+            position: absolute;
+            top: calc(50% - #{$nubsi-size}/2);
+            right: -$nubsi-size/1;
+            z-index: -1;
+            transform: rotate(45deg);
+            transform-origin: 50% 50%;
+            background: $first-bg;
+            animation: nubsiFadeInRight 300ms cubic-bezier(1, 0, 0, 1);
+        }
+    }
+}
+
+.accordeon-tabs__content {
+    padding: .5em .75em;
+    animation: fadeInDown 250ms cubic-bezier(1, 0, 0, 1);
+  
+
+    p {
+        margin-top: 1em;
+    }
+
+    @media (min-width: 601px) {
+        width: calc(100% - 200px);
+        padding: .5em 2.75em;
+        position: absolute;
+        top: 2em;
+        right: 0;
+        z-index: -2;
+        animation: fadeInRight 300ms cubic-bezier(1, 0, 0, 1.1) 200ms backwards;
+    }
+}
+
+@media(max-width:601px) {
+    .accordeon-tabs__content {
+        margin-top: .75em;
+        margin-bottom: .75em;
+    }
+}
+
+.accordeon-tabs__icon {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    transition: transform 300ms ease-in;
+
+    .accordeon-tabs__link:hover>& {
+        animation: caretDownLoop 900ms ease infinite;
+    }
+
+    @media (min-width: 601px) {
+        display: none;
+    }
+
+    .isActive & {
+        transform: rotate(180deg);
+
+        :hover>& {
+            animation: none;
+        }
+    }
+}
+
+//// Animations
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn-activeTabShadow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.35;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -10px, 0);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes nubsiFadeInRight {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate3d(-10px, 0, 0);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: rotate(45deg) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes caretDownLoop {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 4px, 0);
+    }
+}
