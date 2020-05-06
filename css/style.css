@@ -281,7 +281,8 @@ body {
   background: linear-gradient(320deg, #DA3469 0%, #15095E 69%);
   position: relative;
   color: #fff;
-  padding: 10px 0;
+  padding: 2em 0;
+  margin-bottom: 10px;
 }
 
 .accordeon-tabs {
@@ -315,7 +316,9 @@ body {
 }
 
 .accordeon-tabs__item.isActive > .accordeon-tabs__link {
-  border-bottom: 1px solid #fff;
+  position: relative;
+  -webkit-box-shadow: -1px -1px 0.5px 0.5px rgba(255, 255, 255, 0.527);
+          box-shadow: -1px -1px 0.5px 0.5px rgba(255, 255, 255, 0.527);
 }
 
 .accordeon-tabs__link {

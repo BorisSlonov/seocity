@@ -2,7 +2,8 @@
     background: $how-work-bg;
     position: relative;
     color: #fff;
-    padding: 10px 0;
+    padding: 2em 0;
+    margin-bottom: 10px;
 }
 
 .accordeon-tabs {
@@ -36,7 +37,8 @@
 }
 
 .accordeon-tabs__item.isActive>.accordeon-tabs__link {
-    border-bottom: 1px solid #fff;
+    position: relative;
+    box-shadow: -1px -1px .5px .5px rgba(255, 255, 255, 0.527);
 
 
 }
