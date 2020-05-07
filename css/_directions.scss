@@ -1,0 +1,126 @@
+.page-directions {
+    background-image: linear-gradient(180deg, #FFFFFF 36%, #4521D7 100%);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.directions {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__row:last-child &__text {
+        color: #fff;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 33.333%;
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+        padding: 0.75em;
+        margin: 0.75em;
+        border-radius: 5px;
+        min-height: 200px;
+        transition: all .3s;
+        height: 100%;
+
+
+
+        &:hover {
+            box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.233);
+            transform: scale(1.04);
+
+
+        }
+
+
+    }
+
+    &__h3 {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1em;
+        font-weight: 500;
+        letter-spacing: .35px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.122);
+        padding-bottom: 0.5em;
+
+        i {
+            font-size: 1.5rem;
+            color: #2c5fe2;
+            transition: all .3s;
+
+            &:hover {
+                color: #FF121A;
+            }
+        }
+    }
+
+
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+
+        span:not(:first-child) {
+            margin-top: 0.5em;
+        }
+    }
+
+    &__btn {
+        margin-top: 1em;
+    }
+}
+
+@media(max-width:1000px) {
+    .directions {
+        &__item {
+            min-height: 270px;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .directions {
+        display: flex;
+
+        &__row:last-child &__text {
+            color: #000;
+        }
+
+        &__row {
+            flex-basis: 50%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            min-height: 240px;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .directions {
+        &__item {
+            min-height: 260px;
+        }
+    }
+}
+
+@media(max-width:425px) {
+    .directions {
+        flex-direction: column;
+
+        &__item {
+            background-color: rgba(255, 255, 255, 0.552);
+            margin: 1em 0;
+            min-height: 170px;
+        }
+    }
+}
