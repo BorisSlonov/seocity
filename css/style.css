@@ -1932,4 +1932,39 @@ p:last-child {
   display: block;
   text-align: center;
 }
+
+@media (max-width: 784px) {
+  .form-popup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form-popup__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+  .form-popup .form-popup-input {
+    margin-bottom: 1.25em;
+  }
+}
+
+.fancybox-content {
+  padding: 2em !important;
+}
+
+@media (max-width: 425px) {
+  .fancybox-content {
+    padding: 2em .75em .75em .75em !important;
+  }
+}
 /*# sourceMappingURL=style.css.map */

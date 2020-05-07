@@ -1,11 +1,12 @@
 #popup {
     display: none;
 }
+
 .form-popup {
     max-width: 550px;
     margin: 0 auto;
     padding: 2em 1em;
-   
+
 
 
     &__row {
@@ -42,11 +43,12 @@
 }
 
 .form-container {
-  
+
     &__h3 {
         text-align: center;
         font-size: 2rem;
     }
+
     &__descr {
         display: block;
         width: 100%;
@@ -59,4 +61,31 @@
     margin-top: 1em;
     display: block;
     text-align: center;
+}
+
+@media (max-width:784px) {
+    .form-popup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__row {
+            flex-direction: column;
+            margin-top: 0;
+        }
+
+        .form-popup-input {
+            margin-bottom: 1.25em;
+        }
+    }
+}
+
+.fancybox-content {
+    padding: 2em !important;
+}
+
+@media(max-width:425px) {
+    .fancybox-content {
+        padding: 2em .75em .75em .75em !important;
+    }
 }
