@@ -18,18 +18,22 @@
 }
 
 .tabs__trigger {
-    border: 1px solid rgb(180, 180, 180) !important;
-    border: 1px solid;
+    border: 1px solid rgba(255, 255, 255, 0.541) !important;
     border-bottom: none;
     color: #000;
     display: block;
     font-weight: bold;
-
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     padding: 15px 20px;
     text-decoration: none;
+    font-weight: 400;
 
     &.is-selected {
         background-color: rgba(255, 255, 255, 0.589);
+        border-bottom:none !important;
+        box-shadow: 0 -6px 15px 1px rgba(255, 255, 255, 0.274);
+        transform: translateY(1px);
     }
 }
 
@@ -38,10 +42,15 @@
 }
 
 .tabs__panel {
-    box-shadow: 0 0 4px 2px rgba(204, 204, 204, 0.46);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.541);
+    border-left: 1px solid rgba(255, 255, 255, 0.541);
+    border-right: 1px solid rgba(255, 255, 255, 0.541);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     background-color: rgba(255, 255, 255, 0.589);
     display: none;
     padding: 1em;
+    outline: none;
 
     .is-initialized & {
         display: inherit;
@@ -98,7 +107,8 @@ p:last-child {
 .tabs__trigger:focus {
     border-bottom: none !important;
     outline: none;
-    box-shadow: 4px -5px 10px 2px rgba(0, 0, 0, 0.122);
+ 
+ 
 }
 
 @media(max-width:768px) {

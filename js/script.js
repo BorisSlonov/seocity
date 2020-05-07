@@ -52,7 +52,7 @@ $(document).ready(() => {
                 // if we switch from mobile to dekstop and have 
                 // more than one active tab, we set the first to
                 //  active and hide the rest	 
-                } else if (activeElements.length > 1) {
+                } else if (activeElements.length > 2580) {
                     hideElements();
                     showFirst();
                 }
@@ -64,7 +64,7 @@ $(document).ready(() => {
     
         $window.on('load resize', function() {
             var windowResized = $.Event('windowResized', {
-                'isDesktop' : $window.outerWidth() > 600
+                'isDesktop' : $window.outerWidth() > 1
             });
             $window.trigger(windowResized);
         });

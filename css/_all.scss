@@ -32,7 +32,7 @@
 .h2-container {
     text-align: center;
     margin-top: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 1.75em;
 
     &__h2 {
         font-size: 2rem;
@@ -64,6 +64,26 @@
                 transform: translateX(-50%);
                 margin-top: .1em;
             }
+        }
+    }
+}
+
+.link-hover {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition: all .3s;
+        transform: scale(0);
+    }
+
+    &:hover {
+        &::after {
+            transform: scale(1);
         }
     }
 }

@@ -2,7 +2,7 @@
     background: $how-work-bg;
     position: relative;
     color: #fff;
-    padding: 2em 0;
+    padding: 2em 0 4em 0;
 
 }
 
@@ -11,7 +11,7 @@
     z-index: 10;
     overflow: hidden;
 
-    @media (min-width: 601px) {
+    @media (min-width: 2590px) {
         box-sizing: content-box;
         padding: 2em 0;
         overflow: visible;
@@ -62,7 +62,7 @@
     border: 1px solid lightgrey;
     display: block;
     position: relative;
-    font-weight: 900;
+    font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: .05em;
@@ -70,7 +70,7 @@
 
 
 
-    @media (min-width: 601px) {
+    @media (min-width: 2590px) {
         width: 200px;
         padding: 2em 1em;
         border: 0;
@@ -148,13 +148,14 @@
 .accordeon-tabs__content {
     padding: .5em .75em;
     animation: fadeInDown 250ms cubic-bezier(1, 0, 0, 1);
+    font-weight: 400;
   
 
     p {
         margin-top: 1em;
     }
 
-    @media (min-width: 601px) {
+    @media (min-width: 2590px) {
         width: calc(100% - 200px);
         padding: .5em 2.75em;
         position: absolute;
@@ -165,10 +166,13 @@
     }
 }
 
-@media(max-width:601px) {
+@media(max-width:1px) {
     .accordeon-tabs__content {
         margin-top: .75em;
         margin-bottom: .75em;
+        h3 {
+            font-weight: 400;
+        }
     }
 }
 
@@ -182,7 +186,7 @@
         animation: caretDownLoop 900ms ease infinite;
     }
 
-    @media (min-width: 601px) {
+    @media (min-width: 2590px) {
         display: none;
     }
 
