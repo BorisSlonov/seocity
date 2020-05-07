@@ -3,7 +3,7 @@
     position: relative;
     color: #fff;
     padding: 2em 0;
-    margin-bottom: 10px;
+
 }
 
 .accordeon-tabs {
@@ -45,7 +45,9 @@
 
 .accordeon-tabs__link {
     transition: all .4s;
-   
+    i {
+        color: rgba(255, 255, 255, 0.466);
+    }
     &:hover {
         cursor: pointer;
         
@@ -130,7 +132,7 @@
             content: '';
             width: $nubsi-size;
             height: $nubsi-size;
-            border: 1px solid rgba(255, 255, 255, 0.596);
+            border: .5px solid rgba(255, 255, 255, 0.75);
             position: absolute;
             top: calc(50% - #{$nubsi-size}/2);
             right: -$nubsi-size/1;
@@ -138,7 +140,7 @@
             transform: rotate(45deg);
             transform-origin: 50% 50%;
             background: $first-bg;
-            animation: nubsiFadeInRight 300ms cubic-bezier(1, 0, 0, 1);
+            animation: nubsiFadeInRight 500ms cubic-bezier(1, 0, 0, 1);
         }
     }
 }
